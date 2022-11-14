@@ -86,10 +86,6 @@ body {
   display: none;
 }
 
-.c3 .c3-chart-arc text {
-  display: none;
-}
-
 .top-content {
   display: flex;
   flex-wrap: wrap;

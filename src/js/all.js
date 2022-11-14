@@ -18,6 +18,7 @@ const addBtn = document.querySelector('.addTicket-btn');
 const searchResult = document.querySelector('.search-result');
 const filterRegion = document.querySelector('#filterRegion');
 const noData = document.querySelector('.no-data');
+const chart = document.querySelector('.chart');
 
 // AXIOS
 axios.get('https://raw.githubusercontent.com/hexschool/js-training/main/travelApi.json')
@@ -44,8 +45,10 @@ filterRegion.addEventListener('change',function(e){
 function render(data){
   if(data.length == 0){
     noData.classList.remove('d-none');
+    chart.classList.add('d-none');
   }else{
     noData.classList.add('d-none');
+    chart.classList.remove('d-none');
   }
   let str = "";
   let formatPrice = 0;
@@ -152,7 +155,10 @@ function renderC3(data){
     },
     donut: {
       title: "套票地區比重",
-      width: 10
+      width: 10,
+      label: {
+        show: false
+      }
     },
   });
 }
