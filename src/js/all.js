@@ -105,7 +105,7 @@ function addTicket(){
     data.push(obj);
     form.reset();
     filterRegion.value = "全部地區";
-    alert('成功新增資料!')
+    // alert('成功新增資料!')
   }  
   render(data);
 }
